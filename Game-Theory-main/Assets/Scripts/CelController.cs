@@ -61,10 +61,11 @@ public class CelController : MonoBehaviour
 
         if(rb.velocity.y < 0.05 && rb.velocity.y > -0.05 && surfaceIsGround)
         {
+            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
             isGrounded = true;
         }
 
-
+        rb.velocity -= new Vector3(0, 0.1f, 0);
 
     }
 
